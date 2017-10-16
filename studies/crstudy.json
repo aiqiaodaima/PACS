@@ -1,0 +1,42 @@
+	{
+    "patientName" : "张三",
+    "patientId" : "9227465",
+    "studyDate" : "20010109",
+    "modality" : "CR",
+    "studyDescription" :"pelvis",
+    "numImages" : 14,
+    "studyId" : "crstudy",
+    "seriesList" : [
+        {
+            "seriesDescription": "Pelvis PA",
+            "seriesNumber" : "1",
+            "instanceList" : [
+		               
+            ]
+        },
+        {
+            "seriesDescription": "时间",
+            "seriesNumber" : "1",
+            "instanceList" : [
+                { "imageId" : "http://cs001.gdyrsy.cn/jpg/001.jpg" },
+                { "imageId" : "http://cs001.gdyrsy.cn/jpg/002.jpg" }
+            ]
+        },
+        {
+            "seriesDescription": "png",
+            "seriesNumber" : "1",
+            "instanceList" : [
+                { "imageId" : "http://cs001.gdyrsy.cn/png/4.png" }
+                
+            ]
+        },
+        {
+            "seriesDescription": "CT",
+            "seriesNumber" : "1",
+            "instanceList" : [
+                { "imageId" : "http://cs001.gdyrsy.cn/ct/vhm.1001.dcm" }
+                
+            ]
+        }
+    ]
+}

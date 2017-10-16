@@ -1,0 +1,13 @@
+{
+    "studyList": [
+        {
+        	"patientName" : "张三",
+            "patientId" : "9227465",
+            "studyDate" : "20170108",
+            "modality" : "CR",
+            "studyDescription" :"脑部",
+            "numImages" : 4,
+            "studyId" : "crstudy"
+        } 	       
+    ]
+}

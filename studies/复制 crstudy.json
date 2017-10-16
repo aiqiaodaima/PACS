@@ -1,0 +1,54 @@
+	{
+    "patientName" : "张三",
+    "patientId" : "9227465",
+    "studyDate" : "20010109",
+    "modality" : "CR",
+    "studyDescription" :"pelvis",
+    "numImages" : 4,
+    "studyId" : "crstudy",
+    "seriesList" : [
+        {
+            "seriesDescription": "Pelvis PA",
+            "seriesNumber" : "1",
+            "instanceList" : [
+                {"imageId" : "01.dcm"},
+                {"imageId" : "02.dcm"},
+                {"imageId" : "03.dcm"},
+                {"imageId" : "03.dcm"},
+                {"imageId" : "05.dcm"},
+               
+                {"imageId" : "02.dcm"},
+                {"imageId" : "03.dcm"},
+                {"imageId" : "03.dcm"},
+                {"imageId" : "05.dcm"},
+               
+                {"imageId" : "02.dcm"},
+                {"imageId" : "03.dcm"},
+                {"imageId" : "03.dcm"},
+                {"imageId" : "05.dcm"},
+                {"imageId" : "06.dcm"}
+            ]
+        },
+        {
+            "seriesDescription": "PELVIS LAT",
+            "seriesNumber" : "1",
+            "instanceList" : [
+                { "imageId" : "02.dcm" }
+            ]
+        },
+        {
+            "seriesDescription": "PELVIS LAT",
+            "seriesNumber" : "1",
+            "instanceList" : [
+                { "imageId" : "03.dcm" }
+            ]
+        },
+        {
+            "seriesDescription": "PELVIS LAT",
+            "seriesNumber" : "1",
+            "instanceList" : [
+                { "imageId" : "04.dcm" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "patientName" : "Dermatology",
+    "patientId" : "922746522",
+    "studyDate" : "20010109",
+    "modality" : "DERM",
+    "studyDescription" :"Skin Rash",
+    "numImages" : 2,
+    "studyId" : "dermatology",
+    "seriesList" : [
+        {
+            "seriesDescription": "Back",
+            "seriesNumber" : "28858",
+            "instanceList" : [
+                {"imageId" : "http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=3d2175db3cd3d539d530078052ee8325/b7003af33a87e950c1e1a6491a385343fbf2b425.jpg"},
+                {"imageId" : "http://cs001.gdyrsy.cn/cs02.jpg"}
+            ]
+        },
+        {
+            "seriesDescription": "aBack",
+            "seriesNumber" : "128858",
+            "instanceList" : [
+                {"imageId" : "https://rawgit.com/chafey/cornerstoneWebImageLoader/master/examples/Renal_Cell_Carcinoma.jpg"},
+                {"imageId" : "http://cs001.gdyrsy.cn/cs02.jpg"},
+                {"imageId" : "http://cs001.gdyrsy.cn/ce01.jpg"}
+            ]
+        }
+    ]
+}
