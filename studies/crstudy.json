@@ -1,5 +1,5 @@
 	{
-    "patientName" : "张三",
+    "patientName" : "对对对",
     "patientId" : "9227465",
     "studyDate" : "20010109",
     "modality" : "CR",
@@ -8,7 +8,7 @@
     "studyId" : "crstudy",
     "seriesList" : [
         {
-            "seriesDescription": "Pelvis PA",
+            "seriesDescription": "2017-10-26",
             "seriesNumber" : "1",
             "instanceList" : [
 		               

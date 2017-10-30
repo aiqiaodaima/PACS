@@ -5,15 +5,15 @@
      onselectstart='return false;'
      onmousedown='return false;'>
     <!-- Viewport -->
-    <div class="viewport"></div>
+    <div class="viewport" id="dicomImage"></div>
 
     <!-- Overlays -->
-    <div class="overlay" style="top:0px; left:0px">
+    <div class="overlay"style="top:0px; left:0px;display: none;">
         <div>Patient Name</div>
         <div>Patient Id</div>
     </div>
 
-    <div class="overlay" style="top:0px; right:0px">
+    <div class="overlay" style="top:0px; right:0px;display: none;">
         <div>Study Description</div>
         <div>Study Date</div>
     </div>
@@ -28,4 +28,25 @@
         <div>Zoom:</div>
         <div>WW/WC:</div>
     </div>
+    
+    <!--这里是弹出层-->
+    <dialog class="annotationDialog">
+        <h5>输入您的注释</h5>
+        <div class="annotationTextInputOptions">
+            <label for="annotationTextInput">新标签</label>
+            <input name="annotationTextInput" class="annotationTextInput" type="text"/>
+        </div>
+        <a class="annotationDialogConfirm btn btn-sm btn-primary">确认</a>
+    </dialog>
+    <dialog class="relabelDialog" oncontextmenu="return false">
+        <h5>Edit your annotation</h5>
+        <div class="annotationTextInputOptions">
+            <label for="annotationTextInput">New label</label>
+            <input name="annotationTextInput" class="annotationTextInput" type="text"/>
+        </div>
+        <div>
+            <a class="relabelRemove btn btn-sm btn-secondary">Remove marker</a>
+            <a class="relabelConfirm btn btn-sm btn-primary">OK</a>
+        </div>
+    </dialog>
 </div>

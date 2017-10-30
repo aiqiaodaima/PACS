@@ -22,6 +22,8 @@
 
   <!-- Cornerstone Demo CSS -->
   <link href="css/cornerstoneDemo.css" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="css/dialogPolyfill.css"/>
 </head>
 
 <body>
@@ -31,11 +33,12 @@
     <nav class="myNav navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-           <a class="navbar-brand" href="javascript:void(0)">远程医疗影像 &nbsp; <small>PACS阅片</small></a>
+           <a class="navbar-brand" href="javascript:void(0)" style="cursor: default;">远程医疗影像 &nbsp; <small>PACS阅片</small></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li><a id="help" href="#" class="button hidden-xs">专家意见</a></li>
-          <li><a id="about" href="#" class="button hidden-xs">病人信息</a></li>
+          <li><a id="about" href="#" class="button hidden-xs">患者信息</a></li>
+          <li><a id="about" href="javascript:window.opener=null;window.open('','_self');window.close();" class="button hidden-xs">返回</a></li>
         </ul>
       </div>
     </nav>
@@ -44,7 +47,7 @@
 
       <!-- Tabs bar -->
       <ul id="tabs" class="nav nav-tabs" >
-        <li class="active"><a href="#studyList" data-toggle="tab">图片清单</a></li>
+        <li class="active"><a href="#studyList" data-toggle="tab">影像列表</a></li>
       </ul>
 
       <!-- Tab content -->
@@ -66,7 +69,7 @@
                 </tr>
               </thead>
               
-              <tbody id="studyListData">
+              <tbody id="studyListData" style="cursor: pointer;">
                 <!-- Table rows get populated from the JSON studyList manifest -->
               </tbody>
             </table>
@@ -102,7 +105,7 @@
 <script src="lib/cornerstone.js"></script>
 
 <!-- include the cornerstone library -->
-<script src="lib/cornerstoneMath.js"></script>
+<script src="lib/cornerstoneMath.min.js"></script>
 
 <!-- include the cornerstone tools library -->
 <script src="lib/cornerstoneTools.js"></script>
@@ -115,6 +118,8 @@
 
 <!-- include the dicomParser library -->
 <script src="lib/dicomParser.js"></script>
+
+<script src="lib/dialogPolyfill.js" type="text/javascript" charset="utf-8"></script>
 
 <!-- include cornerstoneDemo.js -->
 <script src="js/setupViewport.js"></script>
@@ -131,4 +136,7 @@
 <script src="js/cornerstoneDemo.js"></script>
 
 </body>
+	<script type="text/javascript">
+		
+	</script>
 </html>

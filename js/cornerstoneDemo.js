@@ -13,7 +13,7 @@ loadTemplate("templates/studyViewer.html", function(element) {
 // Get study list from JSON manifest
 $.getJSON('studyList.json', function(data) {
   data.studyList.forEach(function(study) {
-
+	data.studyList[0].patientName = 1;
     // Create one table row for each study in the manifest
     var studyRow = '<tr><td>' +
     study.patientName + '</td><td>' +
@@ -28,8 +28,10 @@ $.getJSON('studyList.json', function(data) {
     var studyRowElement = $(studyRow).appendTo('#studyListData');
 
     // On study list row click
+    var num = 0;
     $(studyRowElement).click(function() {
-
+    	num++;
+    	if (num==1) {    	
       // Add new tab for this study and switch to it
       var studyTab = '<li><a href="#x' + study.patientId + '" data-toggle="tab">' + study.patientName + '</a></li>';
       $('#tabs').append(studyTab);
@@ -57,6 +59,8 @@ $.getJSON('studyList.json', function(data) {
 
       // Now load the study.json
       loadStudy(studyViewerCopy, viewportTemplate, study.studyId + ".json");
+      }
+    	
     });
   });
 });

@@ -16,10 +16,10 @@ function setupViewport(element, stack, image) {
     cornerstoneTools.wwwc.activate(element, 1); // ww/wc is the default tool for left mouse button
     cornerstoneTools.pan.activate(element, 2); // pan is the default tool for middle mouse button
     cornerstoneTools.zoom.activate(element, 4); // zoom is the default tool for right mouse button
-    cornerstoneTools.probe.enable(element);
-    cornerstoneTools.length.enable(element);
-    cornerstoneTools.ellipticalRoi.enable(element);
-    cornerstoneTools.rectangleRoi.enable(element);
+//  cornerstoneTools.probe.enable(element);
+//  cornerstoneTools.length.enable(element);
+//  cornerstoneTools.ellipticalRoi.enable(element);
+//  cornerstoneTools.rectangleRoi.enable(element);
     cornerstoneTools.wwwcTouchDrag.activate(element);
     cornerstoneTools.zoomTouchPinch.activate(element);
 

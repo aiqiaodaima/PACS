@@ -4,13 +4,16 @@ function loadStudy(studyViewer, viewportModel, studyId) {
 
     // Get the JSON data for the selected studyId
     $.getJSON('studies/' + studyId, function(data) {
-
+		console.log(data.seriesList[0].seriesDescription)
+		data.seriesList[0].seriesDescription = 1;
+		data.patientName = 'kkk'
         var imageViewer = new ImageViewer(studyViewer, viewportModel);
         imageViewer.setLayout('1x1'); // default layout
 
 		var arr = ['01.dcm','02.dcm','03.dcm','04.dcm','05.dcm','06.dcm']
 		for (var i = 0;i<arr.length;i++) {
 			data.seriesList[0].instanceList.push({"imageId" : arr[i]})
+			
 		}
 		
 
@@ -20,11 +23,14 @@ function loadStudy(studyViewer, viewportModel, studyId) {
         function initViewports() {
             imageViewer.forEachElement(function(el) {
                 cornerstone.enable(el);
+                console.log(el)
                 $(el).droppable({
                     drop : function(evt, ui) {
                         var fromStack = $(ui.draggable.context).data('stack'), toItem = $(this).data('index');
+//                      console.log($(this).data('index')
                         useItemStack(toItem, fromStack);
                     }
+                    
                 });
             });            
         }
@@ -45,8 +51,8 @@ function loadStudy(studyViewer, viewportModel, studyId) {
             imageViewer.setLayout(type);
             initViewports();
             resizeStudyViewer();
-            if (previousUsed.length > 0) {
-                previousUsed = previousUsed.slice(0, imageViewer.viewports.length);
+            if (previousUsed.length > 0) {           	
+                previousUsed = previousUsed.slice(0, imageViewer.viewports.length);              
                 var item = 0;
                 previousUsed.forEach(function(v){
                     useItemStack(item++, v);
@@ -182,10 +188,10 @@ function loadStudy(studyViewer, viewportModel, studyId) {
                     $(el).data('setup', true);
                 }
             });
-            /*cornerstone.loadAndCacheImage(imageId).then(function(image){
-                setupViewport(element, imageViewer.stacks[stack], image);
-                setupViewportOverlays(element, data);
-            });*/
+//          cornerstone.loadAndCacheImage(imageId).then(function(image){
+//              setupViewport(element, imageViewer.stacks[stack], image);
+//              setupViewportOverlays(element, data);
+//          });
         }
         // Resize study viewer
         function resizeStudyViewer() {
@@ -201,9 +207,9 @@ function loadStudy(studyViewer, viewportModel, studyId) {
                 cornerstone.resize(el, true);
 
                 if ($(el).data('waiting')) {
-                    var ol = vp.find('.overlay-text');
-                    if (ol.length < 1) {
-                        ol = $('<div class="overlay overlay-text">请把一个堆栈拖到这里来查看图像。</div>').appendTo(vp);
+                    var ol = vp.find('.overlay-text');                    
+                    if (ol.length < 1) {                    	
+                        ol = $('<div class="overlay overlay-text">该病人未上传PACS影像资料。</div>').appendTo(vp);
                     }
                     var ow = vp.width() / 2, oh = vp.height() / 2;
                     ol.css({top : oh, left : ow - (ol.width() / 2)}); 

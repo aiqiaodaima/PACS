@@ -13,7 +13,9 @@ body {
     background-color: #060606;
     overflow: hidden;
 }
-
+.btn-group-sm>.btn, .btn-sm{
+	font-size: 20px;
+}
 .hidden {
     display: none;
 }
@@ -21,7 +23,13 @@ body {
 .modal-content {
     background-color: #202020;
 }
-
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a{
+	color: #FFFFFF;
+	font-size: 20px;
+}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>li>a:hover{
+	color: #FFFFFF;
+}
 .btn-default {
   color: #ffffff;
   background-color: #424242;
