@@ -8,8 +8,7 @@ function loadStudy(studyViewer, viewportModel, studyId) {
 		data.seriesList[0].seriesDescription = 1;
 		data.patientName = 'kkk'
         var imageViewer = new ImageViewer(studyViewer, viewportModel);
-        imageViewer.setLayout('1x1'); // default layout
-
+        imageViewer.setLayout('1x1'); // default layout		
 		var arr = ['01.dcm','02.dcm','03.dcm','04.dcm','05.dcm','06.dcm']
 		for (var i = 0;i<arr.length;i++) {
 			data.seriesList[0].instanceList.push({"imageId" : arr[i]})

@@ -18,15 +18,15 @@
             "seriesDescription": "时间",
             "seriesNumber" : "1",
             "instanceList" : [
-                { "imageId" : "http://cs001.gdyrsy.cn/jpg/001.jpg" },
-                { "imageId" : "http://cs001.gdyrsy.cn/jpg/002.jpg" }
+                { "imageId" : "https://cs.gdyrsy.com/Image/jpg/001.jpg" },
+                { "imageId" : "https://cs.gdyrsy.com/Image/jpg/002.jpg" }
             ]
         },
         {
             "seriesDescription": "png",
             "seriesNumber" : "1",
             "instanceList" : [
-                { "imageId" : "http://cs001.gdyrsy.cn/png/4.png" }
+                { "imageId" : "https://cs.gdyrsy.com/Image/ot/01.dcm" }
                 
             ]
         },
@@ -34,7 +34,7 @@
             "seriesDescription": "CT",
             "seriesNumber" : "1",
             "instanceList" : [
-                { "imageId" : "http://cs001.gdyrsy.cn/ct/vhm.1001.dcm" }
+                { "imageId" : "https://cs.gdyrsy.com/Image/us/01.dcm" }
                 
             ]
         }

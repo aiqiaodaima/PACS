@@ -125,7 +125,9 @@ body, html {height:100%}
 .table-striped>tbody>tr:nth-of-type(odd) {
   background-color: #202020;
 }
-
+textarea{
+	color: #000000;
+}
 .studyRow {
     margin-left: 0px;
     margin-rigth: 0px;

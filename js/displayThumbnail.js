@@ -8,7 +8,7 @@ function displayThumbnail(seriesList, seriesElement, element, stack, loaded) {
 
     // Make the selected thumbnail active
     $(seriesElement).addClass('active');
-
+	console.log($(seriesElement))
     var enabledImage = cornerstone.getEnabledElement(element);
     if (enabledImage.image) {
         // Stop clip from if playing on element
@@ -28,12 +28,16 @@ function displayThumbnail(seriesList, seriesElement, element, stack, loaded) {
         // Get the state of the stack tool
         var stackState = cornerstoneTools.getToolState(element, 'stack');
         stackState.data[0] = stack;
+        //这里是控制让第几张显示
         stackState.data[0].currentImageIdIndex = 0;
+//		stackState.data[0].currentImageIdIndex = 1;
 
+		
         // Get the default viewport
         var defViewport = cornerstone.getDefaultViewport(element, image);
         // Get the current series stack index
         // Display the image
+       
         cornerstone.displayImage(element, image, defViewport);
         // Fit the image to the viewport window
         cornerstone.fitToWindow(element);
