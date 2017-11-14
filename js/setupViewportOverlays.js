@@ -42,7 +42,7 @@ function setupViewportOverlays(element, data) {
         var stack = toolData.data[0];
 
         // Update Image number overlay
-        $(bottomLeft[2]).text("Image # " + (stack.currentImageIdIndex + 1) + "/" + stack.imageIds.length);
+        $(bottomLeft[2]).text("影像数 # " + (stack.currentImageIdIndex + 1) + "/" + stack.imageIds.length);
     }
     // Add a CornerstoneNewImage event listener on the 'element' (viewer) (?)
     $(element).on("CornerstoneNewImage", onNewImage);
@@ -51,11 +51,11 @@ function setupViewportOverlays(element, data) {
     // On image rendered
     function onImageRendered(e, eventData) {
         // Set zoom overlay text
-        $(bottomRight[0]).text("Zoom:" + eventData.viewport.scale.toFixed(2));
+        $(bottomRight[0]).text("放大倍数:" + eventData.viewport.scale.toFixed(2));
         // Set WW/WL overlay text
-        $(bottomRight[1]).text("WW/WL:" + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter));
+        $(bottomRight[1]).text("对比度:" + Math.round(eventData.viewport.voi.windowWidth) + "/" + Math.round(eventData.viewport.voi.windowCenter));
         // Set render time overlay text
-        $(bottomLeft[1]).text("Render Time:" + eventData.renderTimeInMs + " ms");
+        $(bottomLeft[1]).text("加载时间:" + eventData.renderTimeInMs + " ms");
     }
     // Add a CornerstoneImageRendered event listener on the 'element' (viewer) (?)
     $(element).on("CornerstoneImageRendered", onImageRendered);

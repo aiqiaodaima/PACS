@@ -4828,7 +4828,7 @@ if (typeof cornerstoneTools === 'undefined') {
         var viewport = changeViewportScale(eventData.viewport, ticks);
         cornerstone.setViewport(element, viewport);
 
-        var config = cornerstoneTools.zoom.getConfiguration();
+        var config = cornerstoneTools.zoom.getConfiguration();        
         var shift,
             newCoords;
 

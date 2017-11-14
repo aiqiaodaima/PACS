@@ -149,44 +149,52 @@ function setupButtons(studyViewer) {
         });
     });
 
-    // 清除
+    // 复位
     $(buttons[4]).on('click touchstart', function() {
         disableAllTools();
         deactivate ();
         forEachViewport(function(element) {
-        	var toolStateManager = cornerstoneTools.getElementToolStateManager(element);
-        	console.log(toolStateManager)
-			toolStateManager.clear(element)
+//      	var toolStateManager = cornerstoneTools.getElementToolStateManager(element);
+//      	console.log(toolStateManager)
+			cornerstoneTools.getElementToolStateManager(element).clear(element);
+
+//			cornerstoneTools.clearToolState(element);
 			cornerstone.updateImage(element);
-//          cornerstoneTools.stackScroll.activate(element, 1);
-//          cornerstoneTools.stackScrollTouchDrag.activate(element);
         });
     });
 
     // Length measurement
     $(buttons[5]).on('click touchstart', function() {
-//      disableAllTools();
         forEachViewport(function() {
-        	disableAllTools();
+    		disableAllTools();
         	deactivate ();
-        	console.log(2)
-            cornerstoneTools.length.activate(element, 1);
-            return false;
-        });
-		
-		
+            cornerstoneTools.length.activate(element, 1);         
+            return false;  
+    	});     
+    });
+    $(buttons[5]).on('dblclick', function() {
+        forEachViewport(function() {
+    		cornerstoneTools.clearToolState(element, "length");
+            cornerstone.updateImage(element);
+    	})     
     });
 
     // Angle measurement
     $(buttons[6]).on('click touchstart', function() {
         disableAllTools();
 		deactivate ();
-		console.log(cornerstoneTools.length)
         cornerstoneTools.simpleAngle.activate(element, 1);
         return false;
-//      cornerstoneTools.simpleAngle.deactivate(element,1);
     });
-
+	$(buttons[6]).on('dblclick', function() {
+        forEachViewport(function() {
+    		cornerstoneTools.clearToolState(element, "simpleAngle");
+            cornerstone.updateImage(element);
+    	})     
+    });
+	
+	
+	
     // 文字标注
     $(buttons[7]).on('click touchstart', function() {
         deactivate ();
@@ -206,7 +214,19 @@ function setupButtons(studyViewer) {
             cornerstoneTools.ellipticalRoi.activate(element, 1);
         });
     });
-
+	$(buttons[8]).on('dblclick', function() {
+        forEachViewport(function() {
+        	console.log($(buttons))
+//      	$(buttons).removeClass('active');
+			$(buttons).removeAttr('aria-describedby');
+    		cornerstoneTools.clearToolState(element, "ellipticalRoi");
+            cornerstone.updateImage(element);
+    	})     
+    });
+	
+	
+	
+	
     // Rectangle ROI
     $(buttons[9]).on('click touchstart', function() {
         disableAllTools();
@@ -215,7 +235,15 @@ function setupButtons(studyViewer) {
             cornerstoneTools.rectangleRoi.activate(element, 1);
         });
     });
-
+	$(buttons[9]).on('dblclick', function() {
+        forEachViewport(function() {
+    		cornerstoneTools.clearToolState(element, "rectangleRoi");
+            cornerstone.updateImage(element);
+    	})     
+    });
+	
+	
+	
     // Play clip
     $(buttons[10]).on('click touchstart', function() {
     	disableAllTools();

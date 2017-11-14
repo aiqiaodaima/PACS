@@ -8,7 +8,6 @@ function displayThumbnail(seriesList, seriesElement, element, stack, loaded) {
 
     // Make the selected thumbnail active
     $(seriesElement).addClass('active');
-	console.log($(seriesElement))
     var enabledImage = cornerstone.getEnabledElement(element);
     if (enabledImage.image) {
         // Stop clip from if playing on element

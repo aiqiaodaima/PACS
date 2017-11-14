@@ -170,6 +170,36 @@ function loadStudy(studyViewer, viewportModel, studyId) {
             $(seriesElement).on('click touchstart', function() {
               useItemStack(0, stackIndex);
             }).data('stack', stackIndex);
+            
+            //增加按钮
+        	
+        	
+        	
+        	
+        	
+            setTimeout(function(){
+            	var i = 0 ;
+            	
+            	$(".btn-group").find('button')[4].onclick = function () {
+					useItemStack(0, i);
+//					toolStateManager.clear(element)
+				}			
+            	
+            	
+				$('.list-group')[0].onclick = function () {
+					console.log($('.list-group-item').filter(".active").index())					
+					var i =  $('.list-group-item').filter(".active").index();										
+					$(".btn-group").find('button')[4].onclick = function () {
+						useItemStack(0, i);
+					}										
+				}	
+			},0);			
+            
+            
+            
+            
+            
+            
         });
 
         function useItemStack(item, stack) {

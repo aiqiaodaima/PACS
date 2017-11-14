@@ -22,19 +22,12 @@
                 { "imageId" : "https://cs.gdyrsy.com/Image/jpg/002.jpg" }
             ]
         },
+        
         {
-            "seriesDescription": "png",
+            "seriesDescription": "分享标注",
             "seriesNumber" : "1",
             "instanceList" : [
-                { "imageId" : "https://cs.gdyrsy.com/Image/ot/01.dcm" }
-                
-            ]
-        },
-        {
-            "seriesDescription": "CT",
-            "seriesNumber" : "1",
-            "instanceList" : [
-                { "imageId" : "https://cs.gdyrsy.com/Image/us/01.dcm" }
+                { "imageId" : "https://cs.gdyrsy.com/Image/png/2.png" }
                 
             ]
         }
