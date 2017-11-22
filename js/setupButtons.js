@@ -205,7 +205,16 @@ function setupButtons(studyViewer) {
             return false;
         });
     });
-
+	$(buttons[7]).on('dblclick', function() {
+        forEachViewport(function() {
+    		cornerstoneTools.clearToolState(element, "arrowAnnotate");
+            cornerstone.updateImage(element);
+    	})     
+    });
+	
+	
+	
+	
     // Elliptical ROI
     $(buttons[8]).on('click touchstart', function() {
         disableAllTools();

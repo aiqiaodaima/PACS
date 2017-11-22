@@ -138,14 +138,17 @@
 </body>
 	<script type="text/javascript">
 		$("#studyListData").on('click',function(){
-			setTimeout(function(){
-				var a = $('.list-group-item')[0].clientHeight+1;
-				var b = $('.thumbnailSelector')[0].clientHeight;
-				c = b - $('.list-group-item').length*a;
-				$('.list-group-item:last-child').css('top',function () {
-					return c = b - $('.list-group-item').length*a;					
-				});
-			},0);			
+			setTimeout(function  () {
+				setTimeout(function(){
+					var a = $('.list-group-item')[0].clientHeight+1;
+					var b = $('.thumbnailSelector')[0].clientHeight;
+					c = b - $('.list-group-item').length*a;
+					$('.list-group-item:last-child').css('top',function () {
+						return c = b - $('.list-group-item').length*a;					
+					});
+				},0);			
+			},100)
+			
 		})
 		var config = {
 	        // invert: true,
@@ -155,4 +158,4 @@
 	    };
         cornerstoneTools.zoom.setConfiguration(config);
 	</script>
-</html>
+</html> 
